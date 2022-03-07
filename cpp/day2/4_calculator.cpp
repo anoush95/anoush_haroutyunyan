@@ -30,6 +30,12 @@ int main ()
 			cout << number1 << " * " << number2 << " = " << number1 * number2 << endl;
 			break;
 		case '/':
+			if (number2 == 0)
+                        {       
+				cout << "Error: invalid input" << endl;
+                                break;
+                        }
+
 			cout << number1 << " / " << number2 << " = " << number1 / number2 << endl;
 			break;
 		default:

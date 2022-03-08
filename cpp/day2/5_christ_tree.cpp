@@ -44,28 +44,27 @@ int main()
 
 
 	
-       	while (i < height)
-	{
-        	int j = 0;
-                int k = height - i - 1;
-
-        	while (k > 0)
+       	i = 1;
+        while (i <= height)
+        {
+               	int j = height;
+                while (j>= 0)
                 {
-                        cout << " ";
-                        k --;
+                        if (j < i)
+                        {
+                                cout << "*";
+                        }
+                        else
+                        {
+                                cout << " ";
+                        }
+                        j--;
                 }
-			while (j < i + 1)
-                	{      
-				cout << "*";
-                        	j++;
-                	}
+                cout << endl;
+                i++;
+        }
 
-               		cout << endl;
-               		i ++;
-	}
-
-	cout << endl;
-
+        cout << endl;
 
 
 	

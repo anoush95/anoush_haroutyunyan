@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void tree1(int i, int j, int height)
+void tree1(int height)
 {
+	int i = 0, j;
 	while (i < height)
         {
         	j = 0;
@@ -19,8 +20,9 @@ void tree1(int i, int j, int height)
         cout << endl;
 }
 
-void tree2(int i, int j,int height)
+void tree2(int height)
 {
+	int i, j;
         i = height;
         while (i > 0)
         {
@@ -38,9 +40,10 @@ void tree2(int i, int j,int height)
         cout << endl;
 }
 
-void tree3(int i, int j, int height)
+void tree3(int height)
 {
-	i = 1;
+
+	int i = 1, j;
         while (i <= height)
         {
                 j = height;
@@ -62,9 +65,10 @@ void tree3(int i, int j, int height)
 
         cout << endl;
 }
-void tree4(int i, int j, int height)
+void tree4(int height)
 {
-	i = 0;
+	
+	int i = 0, j;
 
         while (i < height)
         {
@@ -99,13 +103,13 @@ int main()
         int i = 0;
 	int j;
 
-        tree1(i, j, height);
+        tree1(height);
 
-	tree2(i, j, height);
+	tree2(height);
 
-	tree3(i, j, height);
+	tree3(height);
 
-	tree4(i, j, height);
+	tree4(height);
 
 
 return 0;

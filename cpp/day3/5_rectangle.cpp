@@ -1,20 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void result(int length, int width, int area, int perimeter)
+int area (int length, int width)
 {
-	area = length * width;
-        cout << "area = " << area << endl;
-
-        perimeter = 2 * (length + width);
-        cout << "perimeter = " << perimeter << endl;
+        return length * width;
 }
-int main () 
+int perimeter(int length, int width)
 {
-        int length;
-        int width;
-        int area;
-        int perimeter;
+        return 2 * (length + width);
+}
+int main ()
+{
+        int length, width;
 
         cout << "length: ";
         cin >> length;
@@ -22,8 +19,13 @@ int main ()
         cout << "width: ";
         cin >> width;
 
-        result(length, width, area, perimeter);
+        area(length, width);
+        perimeter(length, width);
+
+        cout << "area = " << area(length, width) << endl << "perimeter = " << perimeter(length, width) << endl;
+
 
 return 0;
 }
+
 

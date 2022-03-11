@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void fact(int number, int factorial, int i)
+int fact(int numb)
 {
-	while (i <= number)
+        int i = 1, facto = 1;
+        while (i <= numb)
         {
-                factorial = factorial * i;
+                facto = facto * i;
                 i++;
         }
 
-        cout << "The factorial of " << number << " is " << factorial << endl;
+        return facto;
 }
-int main() 
+int main()
 {
-        int number;
-        int factorial = 1;
-        int i = 1;
-
+        int number, factorial;
         cout << "number: ";
         cin >> number;
-
-        fact(number, factorial, i);
+        factorial = fact(number);
+        cout << "The factorial of " << number << " is " << factorial << endl;
 
 return 0;
 }
+
+
 

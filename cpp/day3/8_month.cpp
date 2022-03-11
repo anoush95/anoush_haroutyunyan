@@ -1,11 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void months(int month, string days)
+void months(int month)
 {
-        cout << "Input month number: ";
-        cin >> month;
-
         switch (month)
         {
                 case 1:
@@ -44,9 +41,9 @@ void months(int month, string days)
 int main ()
 {
 	int month;
-	string days;
-
-	months(month, days);
+	cout << "Input month number: ";
+        cin >> month;
+	months(month);
 
 return 0;
 }

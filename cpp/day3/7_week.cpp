@@ -3,8 +3,6 @@ using namespace std;
 
 void day_name(int day)
 {		
-	cout << "Input week number(1-7): ";
-	cin >> day;
 	
 	switch (day) 
 	{
@@ -34,9 +32,11 @@ void day_name(int day)
 	}
 }
 int main ()
-
-{	int day;
+{	
+	int day;
+	cout << "Input week number(1-7): ";
+        cin >> day;
 	day_name(day);
 
-	return 0;
+return 0;
 }

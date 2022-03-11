@@ -9,20 +9,20 @@ int main()
         const int n = 5;
         int matrix[n][n];
 
-        for(i=0; i<n ; i++)
+        for(i = 0; i < n; i++)
         {
-                for(j=0; j<n; j++)
+                for(j = 0; j < n; j++)
                 {
-                        matrix[i][j] = (rand()%10);
+                        matrix[i][j] = (rand() % 10);
                         {
-                                cout << matrix[i][j]<<" ";
+                                cout << matrix[i][j] << " ";
                         }
                 }
                 cout << endl;
 	}
-	for(i=0; i<n ; i++)
+	for(i = 0; i < n ; i++)
         {
-                for(j=0; j<n; j++)
+                for(j = 0; j < n; j++)
 		{ 
 			if(i != j && i < j)
 			{			
@@ -32,7 +32,7 @@ int main()
 			{
 				upper_right_triangle += matrix[i][j];
 			}
-			if((i + j < n - 1) && (i<=n - 1 || j <= n - 1))
+			if((i + j < n - 1) && (i <= n - 1 || j <= n - 1))
 			{
 				upper_left_triangle += matrix[i][j];
 			}

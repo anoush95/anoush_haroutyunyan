@@ -1,40 +1,55 @@
 #include <iostream>
 using namespace std;
 
+void reverse_elements (int *pointer, int *number);
+
 int main ()
 {
-	int n = 7;
-        int arr[n];
-        int tmp = 0, i;
-        int *startP = arr;
-	int *endP = arr + n - 1;
-        cout << "Enter 7 numbers: \n";
-        for (i = 0; i < n; i++)
+     	int num;
+    	cout << "Input the number of elements:";
+      	cin >> num;
+        int *array = new int[num];
+        cout << "Input the elements:\n";
+       	int *pointer = array;
+
+        while (pointer < array + num)
         {
-                cin >> arr[i];
+        	cin >> *pointer++;
         }
-	i = 0;
+        cout << endl;
+        pointer = array;
+        while (pointer < array + num)
+        {
+                cout << *pointer++ << " ";
+        }
 	cout << endl;
-        while(i < n/2)
-        {
-		if(startP < endP)
-		{
-                	tmp = *endP;
-			*endP = *startP;
-			*startP = tmp;
-                	startP++;
-                	endP--;
-		}
-		i++;
-        }
-		
-	for (i = 0; i < n; i++)
-	{
-		cout << arr[i] << endl;
-	}
+        reverse_elements (array, &num);
+
 return 0;
 }
+void reverse_elements (int *pointer, int *number)
+{
+	int *ptr = pointer;
+        int *startP = pointer;
+    	int *endP = pointer + *number - 1;
 
-
-
-
+	while (ptr < pointer + *number / 2) 
+	{
+                int tmp;
+                if (startP < endP) 
+		{
+                        tmp = *endP;
+                        *endP = *startP;
+                        *startP = tmp;
+                        startP++;
+                        endP--;
+                }
+                *(ptr++);
+        }
+        ptr = pointer;
+        while (ptr < pointer + *number) 
+	{
+        	cout << *(ptr++) << " ";
+        }
+	cout << endl;
+}

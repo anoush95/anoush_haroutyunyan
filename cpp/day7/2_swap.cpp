@@ -1,23 +1,24 @@
 #include <iostream>
 using namespace std;
 
+void swap_elements (int *x, int *y);
+
 int main ()
 {
-	int x, y, tmp;
-	int *pointer1, *pointer2;
+	int x, y;
 
 	cout << "Input x = ";
 	cin >> x;
 	cout << "Input y = ";
 	cin >> y;
+	swap_elements(&x, &y);
 
-	pointer1 = &x;
-	pointer2 = &y;
-
-	tmp = *pointer1;
-	*pointer1 = *pointer2;
-	*pointer2= tmp;
-
-	cout << "x = " << x << " y = " << y << endl;
 return 0;
+}
+void swap_elements (int *x, int *y)
+{
+	int tmp = *x;
+        *x = *y;
+        *y = tmp;
+	cout << "x = " << *x << endl << "y = " << *y << endl;
 }

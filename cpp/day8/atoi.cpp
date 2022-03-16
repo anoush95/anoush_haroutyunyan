@@ -1,23 +1,26 @@
 #include <iostream>
 #include "atoi.h"
-
 using namespace std;
 
-int main (int argc, char *argv[])
+int myAtoi (char* string) 
 {
-	int sum1 = 0, sum2 = 0;
-	for(int i = 1; i < argc; i++)
+   int result = 0;
+   for (int i = 0; string[i] != '\0'; i++) 
+   {
+	if(string[i] >= '0' && string[i] <= '9')
 	{
-		sum1 += atoi(argv[i]);
-		sum2 += myAtoi(argv[i]);
-
+      		result = result * 10 + string[i] - '0';
+	
+		if (string[0] == '-')
+		
+		 	result = -result;
+		
 	}
-	cout << "atoi: " << sum1 << endl;
-        cout << "myatoi: " << sum2 << endl;
-
-return 0;
+	
+   } 
+   return result;
 }
-
+      
 
 
 

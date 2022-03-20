@@ -3,34 +3,38 @@ using namespace std;
 
 int main ()
 {
-	const int size = 3;
+	const int size = 6;
 	int array[size][size];
-	int number = 1;
-	int i,j;
+	int number = 1, i, j, length = size, p = 0;
+	
+	while (number <= size * size)
+	{	
 
-	for(i = 0, j = 0; j < size; j++)
-	{
-		array[i][j] = number;
-		number++;
-	}
-	for(i = size - 2, j = size - 1; i < size; i++)
-	{
-		array[i][j] = number;
-                number++;
+		for(i = p; i < length; i++)
+		{
+			array[p][i] = number;
+			number++;
+		}
+		for(i = p + 1; i < length; i++)
+		{
+			array[i][length - 1] = number;
+                	number++;
 
-	}
-	for(i = size - 1, j = size - 2; j >= 0; j--)
-        {
-                array[i][j] = number;
-                number++;
+		}
+		for(i = length - 2; i >= p; i--)
+        	{
+                	array[length - 1][i] = number;
+                	number++;
 
-        }
+        	}
 
-	for(i = size - 2, j = 0; j < size - 1; j++)
-	{
-		array[i][j] = number;
-                number++;
+		for(i = length - 2; i > p; i--)
+		{
+			array[i][p] = number;
+                	number++;
 
+		}
+		p++; length -= 1;
 	}
 	for(i = 0; i < size; i++)
 	{

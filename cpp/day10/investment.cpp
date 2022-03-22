@@ -42,12 +42,12 @@ int main (int argc, char* argv[])
 	{
                 monthly_income = percentage (principal_amount, interest_rate);
                 principal_amount += monthly_income;
-                cout << m + 2 << "/" << day << "/" << year << "| " << principal_amount << "amd | " << monthly_income << endl;
+                cout << m + 1 << "/" << day << "/" << year << "| " << principal_amount << "amd | " << monthly_income << endl;
                 m++;
                 if (m == 12) 
 		{
-                        year++;
                         m = 0;
+			year++;
                 }
         }
  

@@ -3,9 +3,10 @@ using namespace std;
 
 int main()
 {
-        int array[100], number, i, largest;
+        int number, i, largest;
         cout << "Enter total number of elements: ";
         cin >> number;
+	int array[number];
         cout << "Enter " << number << " numbers:\n";
         {
                 for(i = 0; i < number; i++)

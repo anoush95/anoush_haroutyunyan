@@ -1,33 +1,31 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main ()
-{	
-	int number, i;
-	cout << "Input the number of elements: ";
-	cin >> number;
-	int array [number];
-        cout << "Input the elements:\n";
-	for (int i = 0; i < number; i++)
+{
+        string number;
+        int p1, p2, temp;
+        cout << "Input the number: ";
 	{
-		cin >> array[i];
+        	cin >> number;
+		cout << endl;
 	}
-	for (int i = 0; i < number; i++)
-        {
-		cout << array[i] << " ";
+        cout << "Input positions to swap: ";
+	{
+		cin >> p1 >> p2;
+		cout << endl;
 	}
-	cout << endl;
-
-	int p1, p2, temp;
-	cout << "Input positions to swap:\n";
-	cin >> p1 >> p2;
-
-	temp = array[p1 - 1];
-	array[p1 - 1] = array[p2 - 1];
-	array[p2 - 1] = temp;
-	for (int i = 0; i < number; i++)
-        {
-                cout << array[i] << " ";
-        }
-	cout << endl;
+	if (p1 > number.length() || p2 > number.length())
+	{
+		cout << "Invalid input" << endl;
+	}
+	else
+	{
+        	temp = number[p1 - 1];
+        	number[p1 - 1] = number[p2 - 1];
+        	number[p2 - 1] = temp;
+		cout << "Output: " << number << endl;
+	}
 return 0;
 }
+

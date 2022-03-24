@@ -1,0 +1,15 @@
+name->անուն
+surname->ազգանուն
+book->գիրք
+my->իմ
+is->է
+flowers->ծաղիկներ
+I->ես
+like->սիրում
+summer->ամառ
+interesting->հետաքրքիր
+beautiful->գեղեցիկ
+you->դու
+friend->ընկեր
+winter->ձմեռ
+toys->խաղալիքներ

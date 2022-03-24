@@ -5,6 +5,7 @@ using namespace std;
 int main() 
 {
 	string sentence = " ";
+	cout << "Input a sentence: ";
 	getline (cin, sentence);
 	string sentence_word [sentence.size()];
 	int x = 0;

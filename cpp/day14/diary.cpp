@@ -10,7 +10,7 @@ struct Diary
 {
 	string note;
         string date;
-} 
+} 	
 	diary;
 
 enum WeekDay 

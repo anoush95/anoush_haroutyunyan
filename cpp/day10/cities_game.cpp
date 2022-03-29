@@ -33,8 +33,6 @@ int main()
 			{
 				city[city.size() -1] = city[city.size() -1] - ('a' - 'A');
 			}
-
-
 			int j = 0;
 			int check = 0;
 			while (j < n ) 
@@ -57,9 +55,7 @@ int main()
 					break;
    				}
 				j++;
-			
 			}
-		
 		}
 	} 
 	if (start == "You") 
@@ -77,7 +73,6 @@ int main()
                         {
                                 city[0] = city[0] + ('a' - 'A');
                         }
-
 			if (city[0] != check_letter) 
 			{
                 		cout << "Game over\n";

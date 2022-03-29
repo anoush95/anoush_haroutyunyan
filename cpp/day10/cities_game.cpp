@@ -5,20 +5,25 @@ using namespace std;
 
 int main() 
 {
-	int start;
-	string cities [91] = {"Shoushi", "Stepanakert", "Hadrut", "Yerevan", "Goris", "Armavir", "Martuni", "Moscow", "London", "Paris","Rome", "Budapest", "Vienna", "Barcelona", "Stockholm", "Copenhagen", "Samara", "Kazan", "Donetsk", "Volgograd", "Odessa", "Perm", "Naples", "Liverpool", "Riga", "Amsterdam", "Zagreb", "Krasnodar", "Krasnodar", "Krasnodar", "Essen", "Genoa", "Oslo", "Duesseldorf", "Goeteborg", "Goeteborg", "Lipetsk", "Hannover", "Astrakhan", "Skopje", "Leeds", "Cardiff", "Wandsbek", "Tallinn", "Florence", "Alicante", "Galati", "Bari", "Nis", "Altona", "Yakutsk", "Northampton", "Novi Sad", "Padova", "Cork", "Hamm", "Amadora", "Ipswich", "Oxford", "Albacete", "Neukoelln", "Warrington", "Zenica", "New York", "Los Angeles", "Phoenix", "Houston", "Banff", "Edmonton", "Jasper", "Delta", "Penticton", "Quesnel", "Trail", "West Vancouver", "Churchill", "Gander", "Inuvik", "Pictou", "North Bay", "Ottawa", "Laval", "Magog", "Magog", "Flin Flon", "Saskatoon","Solo", "Karak", "Samarkand", "Lichinga"};
-	cout << "To start the game press 1.\t For computer to start the game press 0: ";
+	string start;
+	string cities [50] = {"Shoushi", "Stepanakert", "Hadrut", "Yerevan", "Goris", "Armavir", "Moscow", "London", "Paris","Rome", "Budapest", "Vienna", "Barcelona", "Stockholm", "Liverpool", "Riga", "Amsterdam", "Zagreb", "Oslo", "Goeteborg", "Hannover", "Astrakhan", "Skopje", "Leeds", "Cardiff", "Tallinn", "Florence", "Nis", "Altona", "Northampton", "Hamm", "Amadora", "Ipswich", "Oxford", "Albacete", "New York", "Los Angeles", "Phoenix", "Houston",  "Edmonton", "Jasper", "Delta", "Penticton", "Quesnel", " Vancouver", "Churchill", "Ottawa", "Solo" "Samarkan", "Lichinga"};
+	cout << "Who starts the game? You or me? ";
 	cin >> start;
 	int i = 0;
-    	if (start == 1) 
+	const int n = 50;
+    	if (start == "me") 
 	{
 		char check_letter;
 		string city;
 		cout << "Input the name of city: ";
 		int k = 0;
-		for (i = 0; i < 90; i++) 
+		for (i = 0; i < n; i++) 
 		{	
 			cin >> city;
+			if (city[0] >= 'A' && city[0] <= 'Z')
+			{
+				city[0] = city[0] + ('a' - 'A');
+			}
 			if ((city[0] != check_letter) && (k > 0)) 
 			{
 				cout << "Game over\n";
@@ -28,15 +33,17 @@ int main()
 			{
 				city[city.size() -1] = city[city.size() -1] - ('a' - 'A');
 			}
+
+
 			int j = 0;
 			int check = 0;
-			while (j < 90 ) 
+			while (j < n ) 
 			{
 				if (city[city.size() - 1] != cities[j][0]) 
 				{
 					check++;
 				}
-				if (check == 90) 
+				if (check == n) 
 				{
 					cout << "You won!\n";
 					return 0;
@@ -55,7 +62,7 @@ int main()
 		
 		}
 	} 
-	if (start == 0) 
+	if (start == "You") 
 	{
 		char check_letter;
 		string city;
@@ -63,27 +70,32 @@ int main()
 		cout << cities[0];
 		check_letter = cities[0].back();
 		cities[0] = "1";	
-		for (i = 0; i < 90; i++) 
+		for (i = 0; i < n; i++) 
 		{
             		cin >> city;
+			if (city[0] >= 'A' && city[0] <= 'Z')
+                        {
+                                city[0] = city[0] + ('a' - 'A');
+                        }
+
 			if (city[0] != check_letter) 
 			{
                 		cout << "Game over\n";
 				return 0;
            		}
-			if( city[city.size() -1] >= 'a' && city[city.size() -1] <= 'z') 
+			if (city[city.size() -1] >= 'a' && city[city.size() -1] <= 'z') 
 			{
 				city[city.size() -1] = city[city.size() -1] - ('a' - 'A');
 			}
             		int j = 0;
 			int check = 0;
-			while (j < 90 ) 
+			while (j < n ) 
 			{
 				if (city[city.size() - 1] != cities[j][0]) 
 				{
                     			check++;
                 		}   
-                		if (check == 90) 
+                		if (check == n) 
 				{
                     			cout << "You won!\n";
                     			return 0;

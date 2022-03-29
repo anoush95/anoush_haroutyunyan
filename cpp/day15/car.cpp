@@ -28,7 +28,6 @@ struct Car
                 cout << "colour    | " << colour << endl;
 		cout << "===============================" << endl;
         }
-
 };
 int main ()
 {

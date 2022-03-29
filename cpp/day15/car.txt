@@ -1,0 +1,10 @@
+toyota, 8000, 85750, 2.4, automatic, white
+toyota, 15000, 115000, 2.5, automatic, black
+subaru, 12000, 117000, 2.5, mechanic, blue
+mercedes, 25000, 168391, 5.0, automatic, black
+opel, 5300, 167770, 1.8, mechanic, green
+kia, 13000, 70628, 2.4, automatic, grey
+hyundai, 8800, 93000, 2.4, automatic, white
+mitsubishi, 6500, 152235, 2.4, automatic, grey
+nissan, 3000, 152200, 1.2, automatic, orange
+ford, 11500, 88856, 2.2, mechanic, blue

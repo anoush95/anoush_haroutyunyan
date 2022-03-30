@@ -68,12 +68,11 @@ int main ()
 	int number, x = 0;
 	cout << "Choose the number of filters: ";
 	cin >>  number;
-	if ( number > 7 || number < 1)
-		{
-			cout << "Invalid input\n";
-			return 0;
-
-		}
+	if (number > 7 || number < 1)
+	{
+		cout << "Invalid input\n";
+		return 0;
+	}
 	cout << "Choose " << number << " filters (brand, model, price, mileage, engine, gearbox, colour): ";
 	cin.ignore();
 	getline (cin, filter);
@@ -87,7 +86,7 @@ int main ()
                         x++;
                         continue;
                 }
-               str[x] += str_filter[i];
+               	str[x] += str_filter[i];
 	}
 	int k = 0;
 	for (int i = 0; i < n; i++)

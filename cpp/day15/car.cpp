@@ -34,7 +34,7 @@ struct Car
 };
 	string * strToArray(string str) 
 	{
-		string * result = new string[10];
+		string * result = new string[8];
 		int x = 0;
 		for (int i = 0; str[i] != '\0'; i++) 
 		{

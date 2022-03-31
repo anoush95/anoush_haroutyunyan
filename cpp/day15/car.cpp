@@ -82,7 +82,7 @@ int main ()
 	int number, x = 0;
 	cout << "Choose the number of filters: ";
 	cin >>  number;
-	if (number > 7 || number < 1)
+	if (number > 8 || number < 1)
 	{
 		cout << "Invalid input\n";
 		return 0;

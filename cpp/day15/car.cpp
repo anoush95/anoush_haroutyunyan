@@ -31,8 +31,22 @@ struct Car
                 cout << "colour    | " << colour << endl;
 		cout << "===============================" << endl;
         }
-
 };
+	string * strToArray(string str) 
+	{
+		string * result = new string[10];
+		int x = 0;
+		for (int i = 0; str[i] != '\0'; i++) 
+		{
+                	if (str[i] == ' ') 
+			{
+                        	x++;
+                        	continue;
+                	}
+               		result[x] += str[i];
+		}
+		return result;
+	}
 int main ()
 {
 	const int n = 10;
@@ -73,30 +87,29 @@ int main ()
 		cout << "Invalid input\n";
 		return 0;
 	}
-	cout << "Choose " << number << " filters (brand, model, price, mileage, engine, gearbox, colour): ";
+	cout << "Choose " << number << " filters (brand, model, priceMin, priceMax, mileage, engine, gearbox, colour): ";
 	cin.ignore();
 	getline (cin, filter);
 	cout << "Input " << filter << " filters ";
-        getline (cin, str_filter);	
-	string str [number];
-	for (int i = 0; str_filter[i] != '\0'; i++)
-        {
-                if (str_filter[i] == ' ')
-                {
-                        x++;
-                        continue;
-                }
-               	str[x] += str_filter[i];
-	}
+        string* filterKeys = strToArray(filter);
+	getline (cin, str_filter);	
+	string* str  = strToArray(str_filter);	
 	int k = 0;
 	for (int i = 0; i < n; i++)
 	{
-		for(int j = 0; j < number; j++)
+		for (int j = 0; j < number; j++)
 		{
-			if (car[i].brand == str[j] || car[i].model == str[j] || car[i].price == atoi(str[j].c_str()) || car[i].mileage == atoi(str[j].c_str()) || car[i].engine == atof(str[j].c_str()) || car[i].gearbox == str[j] || car[i].colour == str[j])
-			{
-				k++;
-			}
+			if (filterKeys[j] == "brand" && car[i].brand == str[j] ||
+				filterKeys[j] == "model" && car[i].model == str[j] ||
+				filterKeys[j] == "priceMin" && car[i].price >= atoi(str[j].c_str()) ||
+				filterKeys[j] == "priceMax" && car[i].price <= atoi(str[j].c_str()) ||
+				filterKeys[j] == "milleage" && car[i].mileage == atoi(str[j].c_str()) ||
+				filterKeys[j] == "engine" && car[i].engine == atof(str[j].c_str()) ||
+				filterKeys[j] == "gearbox" && car[i].gearbox == str[j] ||
+				filterKeys[j] == "colour" && car[i].colour == str[j]) 
+				{
+					k++;
+				}
 		       	if( k == number)
 		       	{
 				car[i].print();

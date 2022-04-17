@@ -31,7 +31,7 @@ using namespace std;
          		}
       		}
    	}
-   	Polynomial Polynomial::operator+ (const Polynomial& b)const
+   	Polynomial Polynomial::operator+ (const Polynomial& b) const
    	{
       		Polynomial a = *this; 
       		Polynomial c;

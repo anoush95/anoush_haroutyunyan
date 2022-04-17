@@ -19,14 +19,14 @@ int main()
         cout << endl;
 
         c = a + b;
-        c.Print ();
+        c.Print();
         cout << endl;
         a += b;
         a.Print();
         cout << endl;
 
         c = a * b;
-        c.Print ();
+        c.Print();
         cout << endl;
         a *= b;
         a.Print();

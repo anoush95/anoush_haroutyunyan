@@ -11,9 +11,12 @@ public:
         void Set(int, int);
         int Degree();
         void Print();
-	Polynomial Add(Polynomial);
-        Polynomial Subtract(Polynomial);
-        Polynomial Multiply(Polynomial);
+	Polynomial operator+ (const Polynomial& b) const;
+	Polynomial &operator+= (const Polynomial& b);
+        Polynomial operator-(const Polynomial& b) const;
+	Polynomial &operator-= (const Polynomial& b);
+        Polynomial operator*(const Polynomial& b) const;
+	Polynomial &operator*= (const Polynomial& b);
         Polynomial MultiplyByNumber(int);
 };
 #endif

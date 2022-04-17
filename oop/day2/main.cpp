@@ -5,19 +5,38 @@ using namespace std;
 int main()
 {
 	Polynomial a, b, c;
-	a.Set (7, 4);
-	a.Set (1, 2);
+        a.Set (3, 2); 
+        a.Set (2, 4); 
 
-	b.Set (6, 3);
-	b.Set (-3, 2);
+        b.Set (5, 2); 
+        b.Set (-3, 5); 
 
-	c = a.Add(b);
-	c.Print();
-	cout << "\n";
+        c = a - b; 
+        c.Print();
+        cout << endl;
+        a -= b;
+        a.Print();
+        cout << endl;
 
-	c = a.Multiply(b);
-	c.Print();
-	cout << endl;
+        c = a + b;
+        c.Print ();
+        cout << endl;
+        a += b;
+        a.Print();
+        cout << endl;
+
+        c = a * b;
+        c.Print ();
+        cout << endl;
+        a *= b;
+        a.Print();
+        cout << endl;
+
+      	c = a.MultiplyByNumber(2);
+        c.Print();
+        cout << endl;
+
+
 return 0;
 }
         

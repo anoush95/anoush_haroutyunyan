@@ -45,7 +45,6 @@ using namespace std;
 		*this = *this + b;
 		return *this;
 	}
-	
    	Polynomial Polynomial::operator- (const Polynomial& b) const
    	{
       		Polynomial a = *this; 

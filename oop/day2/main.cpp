@@ -36,7 +36,5 @@ int main()
         c.Print();
         cout << endl;
 
-
 return 0;
 }
-        
